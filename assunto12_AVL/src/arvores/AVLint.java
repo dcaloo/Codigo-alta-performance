@@ -10,6 +10,14 @@ public class AVLint {
     }
     public NO root = null;
 
+    public void mostraFB(NO p) {
+        if(p != null) {
+            mostraFB(p.esq);
+            mostraFB(p.dir);
+            System.out.println("dado: "+ p.dado+ "\t FB: "+ (p.hDir-p.hEsq));
+        }
+    }
+
     public NO inserirH(NO p, int info) {
         if (p == null) { //nó inserido sempre será nó folha
             p=new NO();
