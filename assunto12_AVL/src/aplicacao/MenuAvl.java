@@ -20,8 +20,9 @@ public class MenuAvl {
                 break;
                 case 1:
                     System.out.println("Informe o valor a ser inserido");
-                    int valor = sc.nextInt()
-                    avl.root = avl.inserirH(avl.root, valor);
+                    int valor = sc.nextInt();
+                    avl.root = avl.inserirAVL(avl.root, valor);
+                    avl.atualizaAlturas(avl.root);
                 break;
                 case 2:
                     System.out.println("Apresentação da AVL");
